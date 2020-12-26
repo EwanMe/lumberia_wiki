@@ -1,26 +1,39 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import { Container, Col, Row } from "react-bootstrap"
 
 const Header = ({ siteTitle }) => (
   <header
+    className="container-fluid"
     style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
+      backgroundColor: "#D5A18E",
+      margin: "0",
+      padding: "0",
     }}
   >
     <div
       style={{
+        display: "flex",
+        alignItems: "center",
         margin: `0 auto`,
         maxWidth: 960,
         padding: `1.45rem 1.0875rem`,
       }}
     >
+      <Link to="/">
+        <img
+          src={require("../images/NV_logo.png")}
+          width="100"
+          heigth="100"
+          alt="logo"
+        />
+      </Link>
       <h1 style={{ margin: 0 }}>
         <Link
           to="/"
           style={{
-            color: `white`,
+            color: "#080604",
             textDecoration: `none`,
           }}
         >
