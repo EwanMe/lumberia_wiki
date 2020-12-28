@@ -1,5 +1,5 @@
 ---
-path: "/elechór"
+path: "/elechor"
 date: "2020-12-28"
 title: "Elechór"
 ---
