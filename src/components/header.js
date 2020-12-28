@@ -8,8 +8,8 @@ const Header = ({ siteTitle }) => (
     className="container-fluid"
     style={{
       backgroundColor: "#D5A18E",
-      margin: "0",
-      padding: "0",
+      margin: "0 0 20px 0",
+      padding: "10px",
     }}
   >
     <div
@@ -27,7 +27,11 @@ const Header = ({ siteTitle }) => (
           alt="logo"
         />
       </Link>
-      <h1 style={{ margin: 0 }}>
+      <h1
+        style={{
+          margin: "0 0 0 10px",
+        }}
+      >
         <Link
           to="/"
           style={{

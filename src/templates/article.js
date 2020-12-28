@@ -5,7 +5,7 @@ export default function Template({ data }) {
   const post = data.markdownRemark
 
   return (
-    <div>
+    <div className="content">
       <Link to="/">Go Back</Link>
       <hr />
       <h1>{post.frontmatter.title}</h1>
