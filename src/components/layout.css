@@ -20,10 +20,21 @@ a {
   color: #b9314f;
 }
 
-.placeholder {
-  color: #3a4f41;
+.wrapper {
+}
+
+nav {
+  max-width: 10%;
 }
 
 .content {
-  padding: 50px;
+  max-width: 50%;
+}
+
+footer {
+  color: #e1dee3;
+  background-color: #3a4f41;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
 }

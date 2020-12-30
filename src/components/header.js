@@ -1,8 +1,6 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-import { Container, Col, Row } from "react-bootstrap"
-import "bootstrap/dist/css/bootstrap.min.css"
 
 const Header = ({ siteTitle }) => (
   <header
@@ -12,46 +10,42 @@ const Header = ({ siteTitle }) => (
       padding: "10px",
     }}
   >
-    <Container
+    <div
       style={{
         margin: `0 auto`,
+        display: "flex",
+        alignItems: "center",
       }}
     >
-      <Row
+      <Link
+        to="/"
         style={{
-          display: "flex",
-          alignItems: "center",
+          width: "10%",
         }}
       >
-        <Col xs={1}>
-          <Link to="/">
-            <img
-              src={require("../images/NV_logo.png")}
-              width="100"
-              heigth="100"
-              alt="logo"
-            />
-          </Link>
-        </Col>
-        <Col>
-          <h1
-            style={{
-              margin: "0 0 0 10px",
-            }}
-          >
-            <Link
-              to="/"
-              style={{
-                color: "#080604",
-                textDecoration: `none`,
-              }}
-            >
-              {siteTitle}
-            </Link>
-          </h1>
-        </Col>
-      </Row>
-    </Container>
+        <img
+          src={require("../images/NV_logo.png")}
+          width="100"
+          heigth="100"
+          alt="logo"
+        />
+      </Link>
+      <h1
+        style={{
+          margin: "0 0 0 10px",
+        }}
+      >
+        <Link
+          to="/"
+          style={{
+            color: "#080604",
+            textDecoration: `none`,
+          }}
+        >
+          {siteTitle}
+        </Link>
+      </h1>
+    </div>
   </header>
 )
 
