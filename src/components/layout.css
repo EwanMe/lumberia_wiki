@@ -10,6 +10,7 @@ body {
   color: #080604;
   background-color: #e1dee3;
   font-family: "Open Sans", Helvetica, sans-serif;
+  font-size: 16px;
 }
 
 h1 {
@@ -20,15 +21,54 @@ a {
   color: #b9314f;
 }
 
-.wrapper {
+#headerWrapper,
+#contentWrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+#headerWrapper {
+  align-items: center;
+  height: 20vh;
+}
+
+#headerTitle > * {
+  color: #080604;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+header {
+  background-color: #d5a18e;
+}
+
+#contentWrapper {
+  flex-wrap: wrap;
+}
+
+nav,
+#logo {
+  padding-left: 1rem;
+  min-width: 15%;
+  max-width: 15%;
+}
+
+#logoImage {
+  width: 50%;
+}
+
+#content,
+#headerTitle {
+  padding: 2rem 0 2rem 0;
+  flex-wrap: wrap;
 }
 
 nav {
-  max-width: 10%;
+  padding-top: 1rem;
 }
 
-.content {
-  max-width: 50%;
+nav > ul {
+  list-style-type: none;
 }
 
 footer {
@@ -37,4 +77,10 @@ footer {
   width: 100%;
   text-align: center;
   padding: 10px;
+}
+
+@media screen and (max-width: 600px) {
+  #logo {
+    display: none;
+  }
 }
