@@ -32,7 +32,7 @@ const Layout = ({ children }) => {
         <div id="content">
           <main>{children}</main>
         </div>
-        {/*<footer>© {new Date().getFullYear()}, Hallvard Jensen</footer>*/}
+        <footer>© {new Date().getFullYear()}, Hallvard Jensen</footer>
       </div>
     </>
   )
