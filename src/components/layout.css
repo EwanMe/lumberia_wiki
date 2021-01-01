@@ -8,7 +8,6 @@ body {
 }
 
 body {
-  min-height: 100vh;
   overflow-x: hidden;
   color: #080604;
   background-image: url(../images/beige-paper.png);
@@ -30,11 +29,17 @@ a {
 #contentWrapper {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 
 #headerWrapper {
   align-items: center;
   height: 20vh;
+}
+
+#contentWrapper {
+  flex-wrap: wrap;
+  padding: 1rem 0 0 0;
 }
 
 #headerTitle > * {
@@ -45,12 +50,6 @@ a {
 
 header {
   background-color: #d5a18e;
-}
-
-#contentWrapper {
-  flex-wrap: wrap;
-  padding: 1rem 0 0 0;
-  position: relative;
 }
 
 nav,
@@ -67,6 +66,7 @@ nav,
 
 #content,
 #headerTitle {
+  padding-left: 1rem;
   flex-wrap: wrap;
 }
 
@@ -76,6 +76,7 @@ nav,
 
 nav > ul {
   list-style-type: none;
+  padding: 0;
 }
 
 footer {
