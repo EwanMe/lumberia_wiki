@@ -3,7 +3,7 @@ import Link from "gatsby-link"
 
 export default function Menu() {
   return (
-    <nav role="navigation">
+    <nav id="menu" role="navigation">
       <ul>
         <li>
           <Link to="/">Main Page</Link>
