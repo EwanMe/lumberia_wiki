@@ -93,7 +93,6 @@ header {
 
 .box {
   border: 1px solid #140c03;
-  border-radius: 3px;
   background-color: #e0dbd3;
 }
 
@@ -105,7 +104,7 @@ footer {
   text-align: center;
   width: 100%;
   padding: 0.7rem 0;
-  color: #e1dee3;
+  color: #e0dbd3;
   background-color: #1f4745;
 }
 

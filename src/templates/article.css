@@ -1,3 +1,28 @@
 p {
   margin-bottom: 1em;
+  line-height: 1.5rem;
+}
+
+strong {
+  font-weight: bold;
+}
+
+table {
+  width: 25%;
+  margin: 0 1rem;
+  float: right;
+  border-collapse: collapse;
+  font-size: smaller;
+}
+
+th,
+td {
+  width: 50%;
+  padding: 0.2em;
+  margin: 0;
+  border: 1px solid black;
+}
+
+th {
+  background-color: #c9ac7e;
 }
