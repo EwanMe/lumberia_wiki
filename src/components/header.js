@@ -4,14 +4,9 @@ import React from "react"
 
 const Header = ({ siteTitle }) => (
   <header>
-    <div id="headerWrapper">
-      <Link to="/" id="logo">
-        <img id="logoImage" src={require("../images/NV_logo.png")} alt="logo" />
-      </Link>
-      <h1 id="headerTitle">
-        <Link to="/">{siteTitle}</Link>
-      </h1>
-    </div>
+    <h1 id="headerTitle" role="banner">
+      <Link to="/">{siteTitle}</Link>
+    </h1>
   </header>
 )
 

@@ -8,16 +8,16 @@ const IndexPage = ({ data }) => (
   <Layout style>
     <SEO title="Lumberian Records" />
     <h1>Latest articles</h1>
+    <hr />
     {data.allMarkdownRemark.edges.map(post => (
       <div key={post.node.id}>
-        <h3>{post.node.frontmatter.title}</h3>
+        <h3 class="listHeader">{post.node.frontmatter.title}</h3>
         <small>Posted on {post.node.frontmatter.date}</small>
         <br />
         <br />
         <Link to={post.node.frontmatter.path}>Read more</Link>
         <br />
         <br />
-        <hr />
       </div>
     ))}
   </Layout>

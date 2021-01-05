@@ -26,14 +26,18 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <div id="contentWrapper">
-        <Menu />
-        <div id="content">
-          <main>{children}</main>
+      <div id="pageWrapper">
+        <div id="col-1">
+          <Menu />
         </div>
-        <footer>© {new Date().getFullYear()}, Hallvard Jensen</footer>
+        <div id="col-2">
+          <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+          <div id="content">
+            <main>{children}</main>
+          </div>
+        </div>
       </div>
+      <footer>© {new Date().getFullYear()}, Hallvard Jensen</footer>
     </>
   )
 }

@@ -8,76 +8,89 @@ body {
 }
 
 body {
-  overflow-x: hidden;
   color: #080604;
   background-image: url(../images/beige-paper.png);
   background-repeat: repeat;
   background-color: #e1dee3;
   font-family: "Open Sans", Helvetica, sans-serif;
   font-size: 16px;
+  overflow-x: hidden;
 }
 
 h1 {
-  font-family: "IM Fell English", cursive;
+  font-family: "IM Fell English", serif;
+  margin: 0;
 }
 
 a {
   color: #b9314f;
 }
 
-#headerWrapper,
-#contentWrapper {
+#pageWrapper {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
 }
 
-#headerWrapper {
-  align-items: center;
-  height: 20vh;
+#col-1 {
+  width: 15rem;
+  padding: 0;
+  margin: 0;
 }
 
-#contentWrapper {
-  flex-wrap: wrap;
-  padding: 1rem 0 0 0;
+#col-1 > * {
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+#col-2 {
+  width: 100%;
+}
+
+header {
+  background-color: #d5a18e;
+  padding: 0;
+}
+
+#headerTitle {
+  margin: 0;
+  padding: 0.7rem 2rem;
 }
 
 #headerTitle > * {
   color: #080604;
   text-decoration: none;
-  font-size: 1.2em;
+  font-size: 0.9em;
 }
 
-header {
-  background-color: #d5a18e;
-}
-
-#menu,
 #logo {
-  display: flex;
-  justify-content: center;
-  min-width: 15%;
-  max-width: 15%;
+  display: block;
+  background-repeat: no-repeat;
+  height: 155px;
+  background-size: 155px;
+  background-image: url(../images/NV_logo.png);
 }
 
-#logoImage {
-  width: 50%;
-}
-
-#content,
-#headerTitle {
-  padding-left: 1rem;
-  flex-wrap: wrap;
-}
-
-#content {
-  width: 70%;
+#menu {
+  margin-top: 2rem;
 }
 
 #menu > ul {
-  list-style-type: none;
-  padding: 0;
-  border: 1px dashed #080604;
+  list-style: square;
+  margin: 0 auto;
+  padding: 0 auto;
+}
+
+#menu > ul > li {
+  padding-bottom: 0.2rem;
+}
+
+#content {
+  width: 90%;
+  margin: 2rem 0;
+  padding: 2rem;
+  border: 1px solid #080604;
+  border-radius: 5px;
+  background-color: #ebe9ed;
 }
 
 footer {
