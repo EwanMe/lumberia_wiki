@@ -32,7 +32,7 @@ const Layout = ({ children }) => {
         </div>
         <div id="col-2">
           <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-          <div id="content">
+          <div id="content" className="box">
             <main>{children}</main>
           </div>
         </div>

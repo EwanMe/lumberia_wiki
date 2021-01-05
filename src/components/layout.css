@@ -1,29 +1,29 @@
-@import url("https://fonts.googleapis.com/css2?family=IM+Fell+English&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alice&family=Open+Sans&display=swap");
 
-html,
-body {
-  margin: 0;
-  padding: 0;
+html {
+  position: relative;
+  min-height: 100%;
 }
 
 body {
-  color: #080604;
+  margin: 0 0 4rem;
+  color: #07090a;
   background-image: url(../images/beige-paper.png);
   background-repeat: repeat;
-  background-color: #e1dee3;
+  background-color: #c9ac7e;
   font-family: "Open Sans", Helvetica, sans-serif;
+  font-weight: lighter;
   font-size: 16px;
   overflow-x: hidden;
 }
 
 h1 {
-  font-family: "IM Fell English", serif;
+  font-family: "Alice", serif;
   margin: 0;
 }
 
 a {
-  color: #b9314f;
+  color: #23556e;
 }
 
 #pageWrapper {
@@ -47,7 +47,7 @@ a {
 }
 
 header {
-  background-color: #d5a18e;
+  background-color: #1f4745;
   padding: 0;
 }
 
@@ -57,7 +57,7 @@ header {
 }
 
 #headerTitle > * {
-  color: #080604;
+  color: #e0dbd3;
   text-decoration: none;
   font-size: 0.9em;
 }
@@ -77,7 +77,8 @@ header {
 #menu > ul {
   list-style: square;
   margin: 0 auto;
-  padding: 0 auto;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 #menu > ul > li {
@@ -88,18 +89,24 @@ header {
   width: 90%;
   margin: 2rem 0;
   padding: 2rem;
-  border: 1px solid #080604;
-  border-radius: 5px;
-  background-color: #ebe9ed;
+}
+
+.box {
+  border: 1px solid #140c03;
+  border-radius: 3px;
+  background-color: #e0dbd3;
 }
 
 footer {
+  position: absolute;
+  height: 3rem;
+  bottom: 0;
+  left: 0;
   text-align: center;
-  margin-bottom: 0;
   width: 100%;
-  padding: 0.7rem;
+  padding: 0.7rem 0;
   color: #e1dee3;
-  background-color: #3a4f41;
+  background-color: #1f4745;
 }
 
 @media screen and (max-width: 600px) {

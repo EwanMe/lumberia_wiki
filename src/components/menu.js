@@ -8,7 +8,7 @@ export default function Menu() {
         <Link to="/" id="logo" title="Go to main page" />
       </div>
       <nav id="menu" role="navigation">
-        <ul>
+        <ul className="box">
           <li>
             <Link to="/">Main Page</Link>
           </li>
