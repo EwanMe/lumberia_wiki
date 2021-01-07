@@ -8,21 +8,35 @@ strong {
 }
 
 table {
-  width: 25%;
+  width: 20%;
   margin: 0 1rem;
   float: right;
   border-collapse: collapse;
   font-size: smaller;
 }
 
-th,
+thead,
 td {
   width: 50%;
   padding: 0.2em;
   margin: 0;
-  border: 1px solid black;
+  border: 1px solid #07090a;
 }
 
 th {
   background-color: #c9ac7e;
+  font-size: 1.3em;
+}
+
+thead tr:nth-child(2) p {
+  font-size: 0.7em;
+  font-weight: normal;
+}
+
+table p {
+  margin: 0;
+}
+
+td:first-child {
+  font-weight: bold;
 }
