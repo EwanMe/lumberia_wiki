@@ -76,25 +76,58 @@ header {
   background-image: url(../images/NV_logo.png);
 }
 
-#menu {
+.menu {
   margin-top: 2rem;
 }
 
-#menu > ul {
+.menu > ul {
   list-style: square;
   margin: 0 auto;
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
 
-#menu > ul > li {
+.menu > ul > li {
   padding-bottom: 0.2rem;
 }
 
-#hamburgerMenu span {
+#hamburger {
+  display: none;
+  cursor: pointer;
+  padding-top: 0.9rem;
+}
+
+#hamburger span {
   display: block;
-  width: 33px;
-  height: 4px;
+  width: 35px;
+  height: 5px;
+  margin: 6px 0;
+  transition: 0.4s;
+  background-color: #e0dbd3;
+}
+
+.transform span:first-child {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.transform span:nth-child(2) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+.transform span:nth-child(3) {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
+#hamburger ul {
+  display: none;
+  width: 8rem;
+}
+
+#hamburger ul.transform {
+  display: block;
 }
 
 #content {
@@ -127,5 +160,23 @@ footer {
 @media screen and (max-width: 600px) {
   #logo {
     display: none;
+  }
+
+  #stdMenu {
+    display: none;
+  }
+
+  #hamburger {
+    display: inline-block;
+  }
+
+  #col-1 {
+    position: absolute;
+    height: 35px;
+    width: 35px;
+  }
+
+  #headerTitle {
+    padding-left: 4rem;
   }
 }

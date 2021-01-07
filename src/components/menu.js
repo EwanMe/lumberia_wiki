@@ -1,35 +1,54 @@
-import React from "react"
+import React, { useState } from "react"
 import Link from "gatsby-link"
 
 export default function Menu() {
+  const [isActive, setActive] = useState(0)
+
+  const handleToggle = () => {
+    setActive(!isActive)
+  }
+
+  const menuListElements = (
+    <>
+      <li>
+        <Link to="/">Main Page</Link>
+      </li>
+      <li>
+        <Link to="">Articles</Link>
+      </li>
+      <li>
+        <Link to="">Books</Link>
+      </li>
+      <li>
+        <Link to="">Random Page</Link>
+      </li>
+      <li>
+        <Link to="">About</Link>
+      </li>
+    </>
+  )
+
   return (
     <>
       <div id="logoBanner" role="banner">
         <Link to="/" id="logo" title="Go to main page" />
       </div>
-      <nav id="menu" role="navigation">
-        <ul className="box">
-          <li>
-            <Link to="/">Main Page</Link>
-          </li>
-          <li>
-            <Link to="">Articles</Link>
-          </li>
-          <li>
-            <Link to="">Books</Link>
-          </li>
-          <li>
-            <Link to="">Random Page</Link>
-          </li>
-          <li>
-            <Link to="">About</Link>
-          </li>
-        </ul>
+      <nav id="stdMenu" className="menu" role="navigation">
+        <ul className="box">{menuListElements}</ul>
       </nav>
-      <nav id="hamburgerMenu" role="navigation">
+      <nav
+        id="hamburger"
+        className={`menu ${isActive ? "transform" : ""}`}
+        role="navigation"
+        onClick={handleToggle}
+      >
         <span />
         <span />
         <span />
+
+        <ul className={`box ${isActive ? "transform" : ""}`}>
+          {menuListElements}
+        </ul>
       </nav>
     </>
   )
