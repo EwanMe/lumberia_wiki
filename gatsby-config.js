@@ -14,6 +14,7 @@ module.exports = {
       },
     },
     `gatsby-transformer-remark`,
+    `gatsby-remark-grid-tables`,
     `gatsby-plugin-catch-links`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,

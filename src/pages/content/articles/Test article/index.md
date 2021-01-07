@@ -4,11 +4,17 @@ date: "2021-01-05"
 title: "Test article"
 ---
 
-| Elechor        |            |
-| -------------- | ---------- |
++----------------+------------+
+| Elechor                     |
++================+============+
 | **Capital**    | Taëleon    |
++----------------+------------+
 | **Population** | 5.000.000  |
++----------------+------------+
 | **Demonym**    | Elechorian |
++----------------+------------+
+
+Here is a [link](/) to test if it works
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum a mauris auctor, sodales elit id, consectetur tellus. Maecenas nec condimentum felis, eget commodo dolor. Vivamus vestibulum metus nunc, a mattis erat tincidunt vel. Quisque malesuada quis tellus a venenatis. Suspendisse tempor diam nisi, sit amet cursus metus sagittis at. Vestibulum ac nibh viverra, vehicula enim nec, imperdiet lacus. Sed ipsum nulla, consequat posuere condimentum quis, lacinia id ipsum. Donec lacinia volutpat enim non pharetra. Nam vel libero et eros sollicitudin porta. Integer facilisis commodo ipsum, vitae bibendum metus tincidunt tincidunt. Sed non mi nec nulla hendrerit maximus ac eu massa. Vivamus semper non elit sit amet euismod.
 

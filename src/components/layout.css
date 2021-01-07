@@ -24,6 +24,12 @@ h1 {
 
 a {
   color: #23556e;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 #pageWrapper {
@@ -56,7 +62,7 @@ header {
   padding: 0.7rem 2rem;
 }
 
-#headerTitle > * {
+#headerTitle > a {
   color: #e0dbd3;
   text-decoration: none;
   font-size: 0.9em;
