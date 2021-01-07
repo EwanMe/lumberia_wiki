@@ -13,8 +13,16 @@ module.exports = {
         path: `${__dirname}/src/pages`,
       },
     },
-    `gatsby-transformer-remark`,
-    `gatsby-remark-grid-tables`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-grid-tables`,
+          },
+        ],
+      },
+    },
     `gatsby-plugin-catch-links`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,

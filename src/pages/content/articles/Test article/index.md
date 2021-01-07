@@ -4,15 +4,23 @@ date: "2021-01-05"
 title: "Test article"
 ---
 
-+----------------+------------+
-| Elechor                     |
-+================+============+
-| **Capital**    | Taëleon    |
-+----------------+------------+
-| **Population** | 5.000.000  |
-+----------------+------------+
-| **Demonym**    | Elechorian |
-+----------------+------------+
+
++-------+----------+------+
+| Table Headings   | Here |
++-------+----------+------+
+| Sub   | Headings | Too  |
++=======+==========+======+
+| cell  | column spanning |
++ spans +----------+------+
+| rows  | normal   | cell |
++-------+----------+------+
+| multi | cells can be    |
+| line  | *formatted*     |
+|       | **paragraphs**  |
+| cells |                 |
+| too   |                 |
++-------+-----------------+
+
 
 Here is a [link](/) to test if it works
 
