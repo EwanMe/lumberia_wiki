@@ -26,6 +26,11 @@ export default function Menu() {
           </li>
         </ul>
       </nav>
+      <nav id="hamburgerMenu" role="navigation">
+        <span />
+        <span />
+        <span />
+      </nav>
     </>
   )
 }

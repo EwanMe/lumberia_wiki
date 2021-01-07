@@ -1,5 +1,4 @@
 import React from "react"
-import Link from "gatsby-link"
 import Layout from "../components/layout"
 import "./article.css"
 
@@ -10,7 +9,7 @@ export default function Template({ data }) {
     <Layout>
       <h1>{post.frontmatter.title}</h1>
       <hr />
-      <h4>Posted on {post.frontmatter.date}</h4>
+      <small>Posted on {post.frontmatter.date}</small>
       <div dangerouslySetInnerHTML={{ __html: post.html }} />
     </Layout>
   )

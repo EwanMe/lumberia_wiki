@@ -14,10 +14,7 @@ const IndexPage = ({ data }) => (
         <h3 class="listHeader">{post.node.frontmatter.title}</h3>
         <small>Posted on {post.node.frontmatter.date}</small>
         <br />
-        <br />
         <Link to={post.node.frontmatter.path}>Read more</Link>
-        <br />
-        <br />
       </div>
     ))}
   </Layout>

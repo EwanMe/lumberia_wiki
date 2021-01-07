@@ -7,7 +7,7 @@ title: "Elechor"
 +------------+---------------+
 | Elechor                    |
 +------------+---------------+
-| This is placeholder info!  |
+| (This is placeholder info!)|
 +============+===============+
 | Capital    | Taëleon       |
 +------------+---------------+

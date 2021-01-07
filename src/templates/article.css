@@ -40,3 +40,11 @@ table p {
 td:first-child {
   font-weight: bold;
 }
+
+hr {
+  margin-bottom: 0;
+}
+
+small {
+  font-style: italic;
+}
