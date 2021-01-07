@@ -4,14 +4,12 @@ date: "2021-01-05"
 title: "Test article"
 ---
 
-
+<!-- prettier-ignore-start -->
 +-------+----------+------+
 | Table Headings   | Here |
 +-------+----------+------+
 | Sub   | Headings | Too  |
 +=======+==========+======+
-| cell  | column spanning |
-+ spans +----------+------+
 | rows  | normal   | cell |
 +-------+----------+------+
 | multi | cells can be    |
@@ -20,7 +18,7 @@ title: "Test article"
 | cells |                 |
 | too   |                 |
 +-------+-----------------+
-
+<!-- prettier-ignore-end -->
 
 Here is a [link](/) to test if it works
 
