@@ -9,6 +9,7 @@ const allContent = ({ data }) => {
     <Layout>
       <SEO title="Lumberian Records" />
       <h1>All Content</h1>
+      <hr />
       <ul>
         {data.allMarkdownRemark.edges.map(post => (
           <li key={post.node.id}>
