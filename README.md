@@ -1,5 +1,5 @@
 <p align="center">
-    <img alt="Lumberian wiki" src="./src/images/NV_logo.png" width="60" />
+    <img alt="Lumberian wiki" src="./src/images/NV_logo.png" width="100" />
 </p>
 <h1 align="center">
   Lumberian Wiki
