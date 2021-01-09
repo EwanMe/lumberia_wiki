@@ -140,6 +140,7 @@ header {
   width: 90%;
   margin: 2rem 0;
   padding: 2rem;
+  box-sizing: content-box;
 }
 
 .box {
@@ -184,6 +185,11 @@ footer {
 
   #headerTitle {
     padding-left: 4rem;
+  }
+
+  #content {
+    width: 100%;
+    box-sizing: border-box;
   }
 }
 
