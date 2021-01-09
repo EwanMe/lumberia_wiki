@@ -4,6 +4,7 @@ import Link from "gatsby-link"
 export default function Menu() {
   const [isActive, setActive] = useState(0)
 
+  // Toggles the "transform" class which activates the hamburger menu on mobile.
   const handleToggle = () => {
     setActive(!isActive)
   }
@@ -21,6 +22,9 @@ export default function Menu() {
       </li>
       <li>
         <Link to="">Random Page</Link>
+      </li>
+      <li>
+        <Link to="/allContent">All Content</Link>
       </li>
       <li>
         <Link to="">About</Link>

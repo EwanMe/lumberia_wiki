@@ -32,6 +32,10 @@ a:hover {
   text-decoration: underline;
 }
 
+li {
+  list-style: square;
+}
+
 #pageWrapper {
   display: flex;
   flex-direction: row;
@@ -81,7 +85,6 @@ header {
 }
 
 .menu > ul {
-  list-style: square;
   margin: 0 auto;
   padding-top: 1rem;
   padding-bottom: 1rem;
