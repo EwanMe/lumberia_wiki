@@ -45,6 +45,7 @@ export default function Menu() {
         className={`menu ${isActive ? "transform" : ""}`}
         role="navigation"
         onClick={handleToggle}
+        onKeyDown={handleToggle}
       >
         <span />
         <span />
