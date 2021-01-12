@@ -12,7 +12,7 @@ const IndexPage = ({ data }) => (
     {data.allMarkdownRemark.edges.map(post => (
       <div key={post.node.id}>
         <h3 class="listHeader">{post.node.frontmatter.title}</h3>
-        <small>Posted on {post.node.frontmatter.date}</small>
+        <small>Published {post.node.frontmatter.date}</small>
         <br />
         <Link to={post.node.frontmatter.path}>Read more</Link>
       </div>

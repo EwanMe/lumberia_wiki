@@ -9,7 +9,7 @@ export default function Template({ data }) {
     <Layout>
       <h1>{post.frontmatter.title}</h1>
       <hr />
-      <small>Posted on {post.frontmatter.date}</small>
+      <small>Published {post.frontmatter.date}</small>
       <div dangerouslySetInnerHTML={{ __html: post.html }} />
     </Layout>
   )
