@@ -8,25 +8,18 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/pages/content/articles`,
+        path: `${__dirname}/src/pages/content/articles`,
         name: `article`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/pages/content/lore`,
+        path: `${__dirname}/src/pages/content/lore`,
         name: `lore`,
       },
     },
     `gatsby-plugin-react-helmet`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `pages`,
-        path: `${__dirname}/src/pages`,
-      },
-    },
     {
       resolve: `gatsby-transformer-remark`,
       options: {

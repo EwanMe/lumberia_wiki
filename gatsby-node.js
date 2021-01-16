@@ -35,7 +35,6 @@ exports.createPages = ({ graphql, actions }) => {
                 collection
               }
               frontmatter {
-                slug
                 path
                 date
                 title
@@ -45,14 +44,14 @@ exports.createPages = ({ graphql, actions }) => {
         }
       }
     `).then(results => {
-      const allEdges = results.data.allMarkdownRemark.edges
-
-      _.each(allEdges, (edge, index) => {
+      results.data.allMarkdownRemark.edges.forEach(({ node }) => {
         createPage({
-          path: `/${edge.node.frontmatter.slug}`,
-          component: path.resolve(`./src/templates/${edge.node.collection}.js`),
+          path: node.frontmatter.path,
+          component: path.resolve(
+            `./src/templates/${node.fields.collection}.js`
+          ),
           context: {
-            slug: edge.node.frontmatter.slug,
+            slug: node.frontmatter.slug,
           },
         })
       })
