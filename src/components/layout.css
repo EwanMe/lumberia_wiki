@@ -42,6 +42,23 @@ li {
   list-style: square;
 }
 
+p {
+  margin-bottom: 1em;
+  line-height: 1.5rem;
+}
+
+hr {
+  margin: 0;
+}
+
+small {
+  font-style: italic;
+}
+
+strong {
+  font-weight: bold;
+}
+
 #pageWrapper {
   display: flex;
   flex-direction: row;

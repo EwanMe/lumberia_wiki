@@ -1,6 +1,6 @@
 import React from "react"
 import Layout from "../components/layout"
-import "./article.css"
+import "./lore.css"
 
 export default function Template({ data }) {
   const post = data.markdownRemark
@@ -10,8 +10,10 @@ export default function Template({ data }) {
       <h1>{post.frontmatter.title}</h1>
       <hr />
       <small>Published {post.frontmatter.date}</small>
-      <small>This is lore</small>
-      <div dangerouslySetInnerHTML={{ __html: post.html }} />
+      <div
+        dangerouslySetInnerHTML={{ __html: post.html }}
+        className="lorePage"
+      />
     </Layout>
   )
 }

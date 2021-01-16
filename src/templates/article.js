@@ -10,7 +10,10 @@ export default function Template({ data }) {
       <h1>{post.frontmatter.title}</h1>
       <hr />
       <small>Published {post.frontmatter.date}</small>
-      <div dangerouslySetInnerHTML={{ __html: post.html }} />
+      <div
+        dangerouslySetInnerHTML={{ __html: post.html }}
+        className="articlePage"
+      />
     </Layout>
   )
 }
