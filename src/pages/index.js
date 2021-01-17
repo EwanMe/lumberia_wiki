@@ -5,7 +5,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 const IndexPage = ({ data }) => (
-  <Layout style>
+  <Layout>
     <SEO title="Lumberian Records" />
     <h1>Latest articles</h1>
     <hr />
