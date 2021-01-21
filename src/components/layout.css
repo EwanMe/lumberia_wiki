@@ -170,6 +170,27 @@ header {
   box-sizing: content-box;
 }
 
+.home {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.home-section {
+  padding-bottom: 1rem;
+}
+
+.cell {
+  box-sizing: border-box;
+  width: 50%;
+  /*border: 0.1rem solid #aaa;*/
+}
+
+/* This is fugly, I know*/
+#latestArticles {
+  padding-right: 2rem;
+}
+
 .box {
   border: 1px solid #140c03;
   background-color: #e0dbd3;
