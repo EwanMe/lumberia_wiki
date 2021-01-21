@@ -3,19 +3,19 @@ import Layout from "../components/layout"
 import "./lore.css"
 
 export default function Template({ data }) {
-  const post = data.markdownRemark
+  const lore = data.markdownRemark
 
   return (
     <Layout>
-      <h1>{post.frontmatter.title}</h1>
+      <h1>{lore.frontmatter.title}</h1>
       <hr />
-      <small>Published {post.frontmatter.date}</small>
-      <div dangerouslySetInnerHTML={{ __html: post.html }} className="lore" />
+      <small>Published {lore.frontmatter.date}</small>
+      <div dangerouslySetInnerHTML={{ __html: lore.html }} className="lore" />
     </Layout>
   )
 }
 
-export const postQuery = graphql`
+export const loreQuery = graphql`
   query LoreByPath($path: String!) {
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html

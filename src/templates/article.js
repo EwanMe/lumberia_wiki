@@ -3,22 +3,22 @@ import Layout from "../components/layout"
 import "./article.css"
 
 export default function Template({ data }) {
-  const post = data.markdownRemark
+  const article = data.markdownRemark
 
   return (
     <Layout>
-      <h1>{post.frontmatter.title}</h1>
+      <h1>{article.frontmatter.title}</h1>
       <hr />
-      <small>Published {post.frontmatter.date}</small>
+      <small>Published {article.frontmatter.date}</small>
       <div
-        dangerouslySetInnerHTML={{ __html: post.html }}
+        dangerouslySetInnerHTML={{ __html: article.html }}
         className="articlePage"
       />
     </Layout>
   )
 }
 
-export const postQuery = graphql`
+export const articleQuery = graphql`
   query ArticleByPath($path: String!) {
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
