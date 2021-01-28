@@ -16,7 +16,8 @@ td {
 
 th {
   background-color: #c9ac7e;
-  font-size: 1.3em;
+  font-size: 1.6em;
+  font-family: "Alice", serif;
 }
 
 thead tr:nth-child(2) p {
