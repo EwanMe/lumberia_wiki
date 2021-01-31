@@ -60,3 +60,19 @@ exports.createPages = ({ graphql, actions }) => {
     })
   })
 }
+
+exports.sourceNodes = async ({ cache }) => {
+  // get the last timestamp from the cache
+  const lastFetched = await cache.get(`timestamp`)
+
+  // pull data from some remote source using cached data as an option in the request
+  const data = await fetch(
+    `https://remotedatasource.com/posts?lastUpdated=${lastFetched}`
+  )
+  // ...
+}
+
+exports.onPostBuild = async ({ cache }) => {
+  // set a timestamp at the end of the build
+  await cache.set(`timestamp`, Date.now())
+}
