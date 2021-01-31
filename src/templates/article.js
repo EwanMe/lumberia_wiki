@@ -1,9 +1,10 @@
 import React from "react"
-import Layout from "../components/layout"
-import "./article.css"
+import Layout from "../components/Layout"
+import "./Article.css"
 
 export default function Template({ data }) {
   const article = data.markdownRemark
+  console.log(article)
 
   return (
     <Layout>

@@ -1,8 +1,8 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Layout from "../components/Layout"
+import SEO from "../components/SEO"
 
 const IndexPage = ({ data }) => (
   <Layout>
@@ -32,7 +32,7 @@ const IndexPage = ({ data }) => (
         <hr />
         {data.allMarkdownRemark.edges.map(post => (
           <div key={post.node.id}>
-            <h3 class="listHeader">{post.node.frontmatter.title}</h3>
+            <h3 className="listHeader">{post.node.frontmatter.title}</h3>
             <small>Published {post.node.frontmatter.date}</small>
             <br />
             <Link to={post.node.frontmatter.path}>Read more</Link>

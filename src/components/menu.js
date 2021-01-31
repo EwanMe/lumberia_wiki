@@ -24,7 +24,7 @@ export default function Menu() {
         <Link to="">Random Page</Link>
       </li>
       <li>
-        <Link to="/allContent">All Content</Link>
+        <Link to="/AllContent">All Content</Link>
       </li>
       <li>
         <Link to="">About</Link>

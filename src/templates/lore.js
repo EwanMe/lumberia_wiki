@@ -1,6 +1,6 @@
 import React from "react"
-import Layout from "../components/layout"
-import "./lore.css"
+import Layout from "../components/Layout"
+import "./Lore.css"
 
 export default function Template({ data }) {
   const lore = data.markdownRemark
