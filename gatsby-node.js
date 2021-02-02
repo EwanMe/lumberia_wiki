@@ -2,6 +2,7 @@ const path = require("path")
 const _ = require("lodash")
 const Promise = require("bluebird")
 
+// Adds markdowns to correct collection based on parent folder name.
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
 
@@ -17,10 +18,11 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   }
 }
 
+// Creates correct page based on the markdowns collection field.
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
 
-  return new Promise((resolve, reject) => {
+  return new Promise(resolve => {
     graphql(`
       {
         allMarkdownRemark(
@@ -61,6 +63,7 @@ exports.createPages = ({ graphql, actions }) => {
   })
 }
 
+// To shorten build time.
 exports.sourceNodes = async ({ cache }) => {
   // get the last timestamp from the cache
   const lastFetched = await cache.get(`timestamp`)
