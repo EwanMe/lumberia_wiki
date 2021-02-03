@@ -22,6 +22,25 @@ class Map extends Component {
     e.preventDefault()
     let target = e.target || e.srcElement
 
+    // --- Zooming in on cursor ---
+
+    // Getting rectangle for map element
+    const mapRect = target.getBoundingClientRect()
+
+    // Calculating where on the map the cursor is (in pixels)
+    const mapX = e.clientX - mapRect.left
+    const mapY = e.clientY - mapRect.top
+
+    // Translating pixels into percentage from left/top
+    const cursorX = (mapX * 100) / mapRect.width
+    const cursorY = (mapY * 100) / mapRect.height
+
+    // Apply where to zoom on map
+    target.style.transformOrigin = `${cursorX}% ${cursorY}%`
+
+    // --- Zooming scaling ---
+
+    // Zoom speed.
     this.scale += e.deltaY * -0.05
 
     // Restrict scale
@@ -38,13 +57,16 @@ class Map extends Component {
     e = e || window.event
     e.preventDefault()
     let target = e.target || e.srcElement
-    console.log(target.offsetWidth, target.offsetHeight)
+    console.log(target.getBoundingClientRect())
 
+    // Makes curson into a grabbing hand
     target.style.cursor = "grabbing"
 
+    // Getting current cursor position.
     this.startX = e.clientX
     this.startY = e.clientY
 
+    // Sets event listeners
     document.onmouseup = this.releaseElement
     document.onmousemove = this.dragElement
   }
@@ -54,6 +76,7 @@ class Map extends Component {
     e.preventDefault()
     let target = e.target || e.srcElement
 
+    // Replaces the element based on the cursor position.
     this.endX = this.startX - e.clientX
     this.endY = this.startY - e.clientY
     this.startX = e.clientX
@@ -61,15 +84,37 @@ class Map extends Component {
 
     target.style.left = target.offsetLeft - this.endX + "px"
     target.style.top = target.offsetTop - this.endY + "px"
+
+    // Handles if the mouse goes ouside the window
+    if (target.releasePointerCapture) {
+      target.releaseCapture()
+    }
+
+    if (target.setPointerCapture) {
+      target.setCapture()
+    }
   }
 
   releaseElement = e => {
-    e.target.style.cursor = "grab"
+    e = e || window.event
+    e.preventDefault()
+    let target = e.target || e.srcElement
 
+    // Changes cursor back to open hand.
+    target.style.cursor = "grab"
+
+    // Releases the events
     document.onmouseup = null
     document.onmousemove = null
 
-    return false
+    // Handles if the mouse goes ouside the window
+    if (target.releasePointerCapture) {
+      target.releaseCapture()
+    }
+
+    if (target.setPointerCapture) {
+      target.setCapture()
+    }
   }
 
   render() {
