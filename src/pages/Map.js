@@ -3,6 +3,9 @@ import React, { Component } from "react"
 import LumberiaMap from "../images/map/test_map.jpg"
 import "../components/Map.css"
 
+// TODO:
+// Zoom in on cursor position. This will be achieved by looking at position of curson on the image.
+
 class Map extends Component {
   constructor() {
     super()

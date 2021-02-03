@@ -64,6 +64,8 @@ exports.createPages = ({ graphql, actions }) => {
 }
 
 // To shorten build time.
+// NOTE: For some reason this doesn't work with the --prefix-paths build,
+// thus it must be commented out.
 exports.sourceNodes = async ({ cache }) => {
   // get the last timestamp from the cache
   const lastFetched = await cache.get(`timestamp`)
