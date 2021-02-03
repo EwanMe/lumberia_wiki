@@ -21,6 +21,9 @@ export default function Menu() {
         <Link to="">Books</Link>
       </li>
       <li>
+        <Link to="/Map">Map</Link>
+      </li>
+      <li>
         <Link to="">Random Page</Link>
       </li>
       <li>
