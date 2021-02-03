@@ -15,7 +15,10 @@ class Map extends Component {
   }
 
   zoom = e => {
+    e = e || window.event
     e.preventDefault()
+    let target = e.target || e.srcElement
+
     this.scale += e.deltaY * -0.05
 
     // Restrict scale
@@ -25,13 +28,16 @@ class Map extends Component {
     this.scale = Math.min(Math.max(farthestZoom, this.scale), nearestZoom)
 
     // Apply scale transform
-    this.mapElement.style.transform = `scale(${this.scale})`
+    target.style.transform = `scale(${this.scale})`
   }
 
   grabElement = e => {
+    e = e || window.event
     e.preventDefault()
+    let target = e.target || e.srcElement
+    console.log(target.offsetWidth, target.offsetHeight)
 
-    this.mapElement.style.cursor = "grabbing"
+    target.style.cursor = "grabbing"
 
     this.startX = e.clientX
     this.startY = e.clientY
@@ -41,19 +47,21 @@ class Map extends Component {
   }
 
   dragElement = e => {
+    e = e || window.event
     e.preventDefault()
+    let target = e.target || e.srcElement
 
     this.endX = this.startX - e.clientX
     this.endY = this.startY - e.clientY
     this.startX = e.clientX
     this.startY = e.clientY
 
-    this.mapElement.style.left = this.mapElement.offsetLeft - this.endX + "px"
-    this.mapElement.style.top = this.mapElement.offsetTop - this.endY + "px"
+    target.style.left = target.offsetLeft - this.endX + "px"
+    target.style.top = target.offsetTop - this.endY + "px"
   }
 
   releaseElement = e => {
-    this.mapElement.style.cursor = "grab"
+    e.target.style.cursor = "grab"
 
     document.onmouseup = null
     document.onmousemove = null
@@ -81,7 +89,6 @@ class Map extends Component {
           alt="Eastern Lumberia"
           onWheel={this.zoom}
           onMouseDown={this.grabElement}
-          ref={el => (this.mapElement = el)}
         />
       </div>
     )
