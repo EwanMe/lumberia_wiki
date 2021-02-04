@@ -4,7 +4,8 @@ import LumberiaMap from "../images/map/test_map.jpg"
 import "../components/Map.css"
 
 // TODO:
-// Zoom in on cursor position. This will be achieved by looking at position of curson on the image.
+// transformOrigin må være basert på hvor på kartet, uavhengig av hvor inn-zoomet man er.
+// Per nå zoomer man utfra hvor musen peker hvis kartet hadde vært helt ut-zoomet (this.scale = 1).
 
 class Map extends Component {
   constructor() {
@@ -57,7 +58,6 @@ class Map extends Component {
     e = e || window.event
     e.preventDefault()
     let target = e.target || e.srcElement
-    console.log(target.getBoundingClientRect())
 
     // Makes curson into a grabbing hand
     target.style.cursor = "grabbing"
