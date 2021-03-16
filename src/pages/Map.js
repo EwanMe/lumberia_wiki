@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 
-import LumberiaMap from "../images/map/test_map.jpg"
+import LumberiaMap from "../images/map/test_map_color.jpg"
 import "../components/Map.css"
 
 // TODO:
